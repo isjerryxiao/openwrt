@@ -134,7 +134,8 @@ case "$FIRMWARE" in
 	alfa-network,ap120c-ac |\
 	glinet,gl-b1300 |\
 	linksys,ea6350v3 |\
-	qcom,ap-dk01.1-c1)
+	qcom,ap-dk01.1-c1 |\
+	p2w,r619ac)
 		ath10kcal_extract "ART" 4096 12064
 		;;
 	asus,map-ac2200)
@@ -196,7 +197,8 @@ case "$FIRMWARE" in
 	alfa-network,ap120c-ac |\
 	glinet,gl-b1300 |\
 	linksys,ea6350v3 |\
-	qcom,ap-dk01.1-c1)
+	qcom,ap-dk01.1-c1 |\
+	p2w,r619ac)
 		ath10kcal_extract "ART" 20480 12064
 		;;
 	asus,map-ac2200)

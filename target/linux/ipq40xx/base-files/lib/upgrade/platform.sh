@@ -62,6 +62,9 @@ platform_do_upgrade() {
 		CI_KERNPART="linux"
 		nand_do_upgrade "$1"
 		;;
+	p2w,r619ac)
+		nand_do_upgrade "$1"
+		;;
 	linksys,ea6350v3 |\
 	linksys,ea8300)
 		platform_do_upgrade_linksys "$1"

@@ -421,8 +421,7 @@ TARGET_DEVICES += zyxel_wre6606
 define Device/p2w_r619ac
 	$(call Device/FitzImage)
 	$(call Device/UbiFit)
-	DEVICE_VENDOR := P&W
-	DEVICE_MODEL := R619AC
+	DEVICE_TITLE := P&W R619AC
 	DEVICE_DTS := qcom-ipq4019-p2w-r619ac
 	DEVICE_DTS_CONFIG := config@10
 	BLOCKSIZE := 128k

@@ -121,7 +121,8 @@ case "$FIRMWARE" in
 	case "$board" in
 	8dev,jalapeno |\
 	glinet,gl-b1300 |\
-	qcom,ap-dk01.1-c1)
+	qcom,ap-dk01.1-c1 |\
+	p2w,r619ac)
 		ath10kcal_extract "ART" 4096 12064
 		;;
 	asus,rt-ac58u)
@@ -156,7 +157,8 @@ case "$FIRMWARE" in
 	case "$board" in
 	8dev,jalapeno |\
 	glinet,gl-b1300 |\
-	qcom,ap-dk01.1-c1)
+	qcom,ap-dk01.1-c1 |\
+	p2w,r619ac)
 		ath10kcal_extract "ART" 20480 12064
 		;;
 	asus,rt-ac58u)

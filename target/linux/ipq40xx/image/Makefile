@@ -30,6 +30,13 @@ define Device/FitzImage
     KERNEL_NAME := zImage
 endef
 
+define Build/qsdk-ipq-factory-nand
+    $(TOPDIR)/scripts/mkits-qsdk-ipq-image.sh \
+        $@.its ubi $@
+    PATH=$(LINUX_DIR)/scripts/dtc:$(PATH) mkimage -f $@.its $@.new
+    @mv $@.new $@
+endef
+
 define Device/UbiFit
 	KERNEL_IN_UBI := 1
 	IMAGES := nand-factory.ubi nand-sysupgrade.bin

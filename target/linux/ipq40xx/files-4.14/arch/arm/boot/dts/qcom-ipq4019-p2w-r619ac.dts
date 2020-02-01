@@ -87,6 +87,8 @@
 
 	leds {
 		compatible = "gpio-leds";
+		pinctrl-0 = <&led_pins>;
+		pinctrl-names = "default";
 
 		led_sys: sys {
 			label = "r619ac:blue:sys";
@@ -211,12 +213,7 @@
 
 			partition@0 {
 				label = "rootfs";
-				reg = <0x0 0x4000000>;
-			};
-
-			partition@4000000 {
-				label = "unused1";
-				reg = <0x4000000 0x4000000>;
+				reg = <0x0 0x8000000>;
 			};
 		};
 	};
@@ -282,6 +279,28 @@
 			bias-disable;
 		};
 	};
+        led_pins: led_pinmux {
+                mux {
+                        pins = "gpio32", "gpio39", "gpio50";
+                        function = "gpio";
+                        bias-pull-up;
+                        output-low;
+                };
+
+                mux_1 {
+                        pins = "gpio52";
+                        function = "gpio";
+                        bias-pull-up;
+                        output-high;
+                };
+
+                mux_2 {
+                        pins = "gpio61";
+                        function = "gpio";
+                        bias-pull-down;
+                        output-high;
+                };
+        };
 };
 
 &usb3_ss_phy {
